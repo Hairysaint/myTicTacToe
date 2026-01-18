@@ -3,8 +3,7 @@ import Square from "./square"
 import { useGameContext } from '../contexts/gameContext';
 
 export default function Board() {
-    let { winner, setWinner, turnX, setTurnX } = useGameContext()
-    let [square, setSquare] = useState(Array(9).fill(''))
+    let { winner, setWinner, turnX, setTurnX, square, setSquare} = useGameContext()
 
     function updateSqState(i){
         if (winner || square[i]) return;
